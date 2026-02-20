@@ -1,0 +1,87 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  width: 100%;
+  height: 100%;
+}
+
+body {
+  font-family: 'Orbitron', sans-serif;
+  background: #000;
+  overflow: hidden;
+  color: #e6ccff;
+}
+
+/* GRID */
+.geo-grid {
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  background-image:
+    linear-gradient(rgba(200,140,255,0.3) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(200,140,255,0.3) 1px, transparent 1px);
+  background-size: 48px 48px;
+}
+
+.geo-grid-glow {
+  position: fixed;
+  inset: 0;
+  z-index: 1;
+  pointer-events: none;
+  background: radial-gradient(
+    circle at var(--gx, 50%) var(--gy, 50%),
+    rgba(200,140,255,0.5),
+    transparent 65%
+  );
+}
+
+/* LAYOUT */
+.game-wrapper {
+  position: relative;
+  z-index: 2;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.map-container {
+  position: relative;
+  width: 85%;
+  height: 85%;
+  background: rgba(15,0,30,0.9);
+  border-radius: 18px;
+  overflow: hidden;
+}
+
+/* MAP */
+#map {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+}
+
+/* CONTROLS */
+.map-controls {
+  position: absolute;
+  bottom: 16px;
+  right: 16px;
+  display: flex;
+  gap: 12px;
+  z-index: 10;
+}
+
+.zoom-btn, .fullscreen-btn {
+  width: 46px;
+  height: 46px;
+  border: none;
+  background: rgba(120,40,255,0.85);
+  color: white;
+  cursor: pointer;
+}

@@ -1,0 +1,145 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Orbitron', sans-serif;
+  background: #000;
+  height: 100vh;
+  overflow: hidden;
+  color: #e6ccff;
+}
+
+#setup {
+  position: fixed;
+  inset: 0;
+  background: radial-gradient(circle at top, #1a0033, #000);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* BACKGROUND GRID */
+.geo-grid {
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(rgba(200,140,255,0.25) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(200,140,255,0.25) 1px, transparent 1px);
+  background-size: 48px 48px;
+  z-index: 0;
+}
+
+/* SOFT GLOW */
+.territory-glow {
+  position: absolute;
+  width: 420px;
+  height: 300px;
+  background: rgba(122,31,255,0.45);
+  filter: blur(90px);
+  animation: pulse 6s ease-in-out infinite;
+  z-index: 1;
+}
+
+@keyframes pulse {
+  0% { transform: scale(0.95); opacity: 0.6; }
+  50% { transform: scale(1.05); opacity: 0.95; }
+  100% { transform: scale(0.95); opacity: 0.6; }
+}
+
+/* SETUP CARD */
+.setup-box {
+  position: relative;
+  z-index: 2;
+  background: rgba(20, 0, 40, 0.88);
+  padding: 40px 46px;
+  border-radius: 20px;
+  border: 1px solid rgba(180,120,255,0.4);
+  box-shadow: 0 0 44px rgba(120,40,255,0.45);
+  width: 420px;
+}
+
+.setup-box h2 {
+  text-align: center;
+  margin-bottom: 28px;
+}
+
+/* LABEL */
+.setup-box label {
+  display: block;
+  margin: 18px 0 10px;
+  font-size: 0.85rem;
+  opacity: 0.85;
+}
+
+/* COLOR PICKER */
+.color-options {
+  display: flex;
+  gap: 14px;
+  margin-bottom: 20px;
+}
+
+.color {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  cursor: pointer;
+  border: 2px solid transparent;
+}
+
+.color.purple { background: #a050ff; }
+.color.blue { background: #4aa3ff; }
+.color.green { background: #4aff8a; }
+.color.red { background: #ff4a4a; }
+
+.color.active {
+  border-color: #fff;
+  box-shadow: 0 0 10px rgba(255,255,255,0.9);
+}
+
+/* SELECT */
+.setup-box select {
+  width: 100%;
+  padding: 12px;
+  background: rgba(0,0,0,0.6);
+  border: 1px solid rgba(180,120,255,0.5);
+  border-radius: 10px;
+  color: #fff;
+  margin-bottom: 20px;
+}
+
+/* SUGGESTIONS */
+.suggestions h4 {
+  margin-bottom: 10px;
+  font-size: 0.9rem;
+}
+
+.suggestions ul {
+  list-style: none;
+  font-size: 0.85rem;
+  opacity: 0.85;
+  margin-bottom: 24px;
+}
+
+.suggestions li {
+  margin-bottom: 6px;
+}
+
+/* BUTTON */
+#startGameBtn {
+  width: 100%;
+  padding: 14px;
+  border: none;
+  border-radius: 24px;
+  background: linear-gradient(135deg, #7a1fff, #4b0082);
+  color: #fff;
+  cursor: pointer;
+  font-size: 1rem;
+  box-shadow: 0 0 18px rgba(122,31,255,0.85);
+}
+
+#startGameBtn:hover {
+  transform: scale(1.04);
+}

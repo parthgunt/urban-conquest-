@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Urban Conquest – Game</title>
+
+  <!-- FONT -->
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600&display=swap" rel="stylesheet">
+
+  <!-- UI CSS -->
+  <link rel="stylesheet" href="game.css">
+
+  <!-- MAPBOX CSS -->
+  <link href="https://api.mapbox.com/mapbox-gl-js/v2.15.0/mapbox-gl.css" rel="stylesheet">
+</head>
+<body>
+
+  <!-- BACKGROUND -->
+  <div class="geo-grid"></div>
+  <div class="geo-grid-glow"></div>
+
+  <div class="game-wrapper">
+    <div class="map-container">
+
+      <div id="map"></div>
+
+      <div class="map-controls">
+        <button class="zoom-btn">+</button>
+        <button class="zoom-btn">−</button>
+        <button class="fullscreen-btn">⛶</button>
+      </div>
+
+    </div>
+  </div>
+  <!-- MAPBOX -->
+  <script src="https://api.mapbox.com/mapbox-gl-js/v2.15.0/mapbox-gl.js"></script>
+
+  <!-- TURF (AREA CALCULATION) -->
+  <script src="https://unpkg.com/@turf/turf@6/turf.min.js"></script>
+
+  <!-- MAP ENGINE -->
+  <script src="map-engine.js"></script>
+
+  <!-- UI JS -->
+  <script src="game.js"></script>
+
+</body>
+</html>
