@@ -1,6 +1,6 @@
 console.log("Map engine starting...");
 
-mapboxgl.accessToken = "";
+mapboxgl.accessToken = "pk.eyJ1IjoicHJhdGVjaCIsImEiOiJjbWx3amJsamQwMG1kM2NzN2g1dzdnMTY2In0.q8zt9x5FMdZbBgny2Ror_Q";
 
 const map = new mapboxgl.Map({
   container: "map",
